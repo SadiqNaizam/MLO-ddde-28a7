@@ -4,81 +4,107 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base Theme */
+    --background: 0 0% 100%; /* Light neutral (white) */
+    --foreground: 222.2 84% 4.9%; /* Dark neutral for text */
 
+    /* Cards & Popovers */
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Core Palette */
+    --primary: 340 82% 52%; /* Vibrant Pink (#E91E63) */
+    --primary-foreground: 0 0% 100%; /* White */
+    --primary-light-variant: 339 90% 83%; /* Light Pink (#FBACD0) */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 291 64% 42%; /* Rich Purple (#9C27B0) */
+    --secondary-foreground: 0 0% 100%; /* White */
+    --secondary-light-variant: 290 47% 70%; /* Light Purple (#CE93D8) */
 
+    --accent: 262 52% 47%; /* Indigo (#673AB7) - Mapped from Tertiary */
+    --accent-foreground: 0 0% 100%; /* White */
+    --accent-light-variant: 261 48% 73%; /* Light Indigo (#B39DDB) */
+
+    /* Neutrals & Borders */
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 340 82% 52%; /* Primary Pink for focus ring */
 
-    --radius: 0.5rem;
+    /* Feedback Colors */
+    --destructive: 0 84.2% 60.2%; /* Default Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --success: 145 63% 42%; /* Green */
+    --success-foreground: 0 0% 100%; /* White */
+    --warning: 38 92% 50%; /* Orange/Yellow */
+    --warning-foreground: 38 92% 10%; /* Dark text for warning */
+    --info: 210 79% 50%; /* Blue */
+    --info-foreground: 0 0% 100%; /* White */
 
+    /* Footer Specific Colors */
+    --footer-background: 215 28% 17%; /* Dark Gray (#1F2937) */
+    --footer-foreground: 220 15% 80%; /* Soft Gray Text */
+
+    /* Radius & Typography */
+    --radius: 0.5rem; /* Soft rounded corners */
+    --font-sans: "Inter", sans-serif;
+
+    /* Sidebar - Kept as is, review if conflicting */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
+    /* Base Dark Theme */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
+    /* Cards & Popovers */
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Core Palette - Dark Mode Variants */
+    --primary: 339 90% 83%; /* Light Pink (#FBACD0) */
+    --primary-foreground: 340 82% 15%; /* Dark Pink/Near Black */
+    /* --primary-light-variant would typically not be primary in dark mode, main --primary is already light */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 290 47% 70%; /* Light Purple (#CE93D8) */
+    --secondary-foreground: 291 64% 10%; /* Dark Purple/Near Black */
 
+    --accent: 261 48% 73%; /* Light Indigo (#B39DDB) */
+    --accent-foreground: 262 52% 12%; /* Dark Indigo/Near Black */
+
+    /* Neutrals & Borders - Dark Mode */
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 339 90% 83%; /* Light Pink for dark mode focus ring */
+
+    /* Feedback Colors - Dark Mode Variants */
+    --destructive: 0 70% 55%; /* A visible red for dark backgrounds */
+    --destructive-foreground: 0 0% 95%; /* Light text */
+    --success: 145 55% 55%; /* A visible green */
+    --success-foreground: 145 55% 10%; /* Dark text */
+    --warning: 38 85% 60%; /* A visible orange/yellow */
+    --warning-foreground: 38 85% 10%; /* Dark text */
+    --info: 210 80% 65%; /* A visible blue */
+    --info-foreground: 210 80% 10%; /* Dark text */
+
+    /* Footer colors are absolute, not themed for dark/light within :root */
+
+    /* Sidebar - Dark Mode Variants - Kept as is */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -97,5 +123,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 }
